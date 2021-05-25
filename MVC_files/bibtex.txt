@@ -1,0 +1,5 @@
+@inproceedings{aygun2021cvpr,
+ author = {M. Ayg\"un and A. Osep and M. Weber and M. Maximov and C. Stachniss and J. Behley and L. Leal-Taixe},
+ title = {{4D Panoptic Segmentation}},
+ booktitle = {Proc. of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+ year = 2021}
