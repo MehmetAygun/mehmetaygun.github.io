@@ -1,0 +1,296 @@
+<style type="text/css">
+    body {
+        font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+        font-weight:300;
+        font-size:18px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 1100px;
+    }
+
+    h1 {
+        font-weight:300;
+    }
+
+    .disclaimerbox {
+        background-color: #eee;
+        border: 1px solid #eeeeee;
+        border-radius: 10px ;
+        -moz-border-radius: 10px ;
+        -webkit-border-radius: 10px ;
+        padding: 20px;
+    }
+
+    video.header-vid {
+        height: 140px;
+        border: 1px solid black;
+        border-radius: 10px ;
+        -moz-border-radius: 10px ;
+        -webkit-border-radius: 10px ;
+    }
+
+    img.header-img {
+        height: 140px;
+        border: 1px solid black;
+        border-radius: 10px ;
+        -moz-border-radius: 10px ;
+        -webkit-border-radius: 10px ;
+    }
+
+    img.rounded {
+        border: 1px solid #eeeeee;
+        border-radius: 10px ;
+        -moz-border-radius: 10px ;
+        -webkit-border-radius: 10px ;
+    }
+
+    a:link,a:visited
+    {
+        color: #1367a7;
+        text-decoration: none;
+    }
+    a:hover {
+        color: #208799;
+    }
+
+    td.dl-link {
+        height: 160px;
+        text-align: center;
+        font-size: 22px;
+    }
+
+    .layered-paper-big { /* modified from: http://css-tricks.com/snippets/css/layered-paper/ */
+        box-shadow:
+                0px 0px 1px 1px rgba(0,0,0,0.35), /* The top layer shadow */
+                5px 5px 0 0px #fff, /* The second layer */
+                5px 5px 1px 1px rgba(0,0,0,0.35), /* The second layer shadow */
+                10px 10px 0 0px #fff, /* The third layer */
+                10px 10px 1px 1px rgba(0,0,0,0.35), /* The third layer shadow */
+                15px 15px 0 0px #fff, /* The fourth layer */
+                15px 15px 1px 1px rgba(0,0,0,0.35), /* The fourth layer shadow */
+                20px 20px 0 0px #fff, /* The fifth layer */
+                20px 20px 1px 1px rgba(0,0,0,0.35), /* The fifth layer shadow */
+                25px 25px 0 0px #fff, /* The fifth layer */
+                25px 25px 1px 1px rgba(0,0,0,0.35); /* The fifth layer shadow */
+        margin-left: 10px;
+        margin-right: 45px;
+    }
+
+
+    .layered-paper { /* modified from: http://css-tricks.com/snippets/css/layered-paper/ */
+        box-shadow:
+                0px 0px 1px 1px rgba(0,0,0,0.35), /* The top layer shadow */
+                5px 5px 0 0px #fff, /* The second layer */
+                5px 5px 1px 1px rgba(0,0,0,0.35), /* The second layer shadow */
+                10px 10px 0 0px #fff, /* The third layer */
+                10px 10px 1px 1px rgba(0,0,0,0.35); /* The third layer shadow */
+        margin-top: 5px;
+        margin-left: 10px;
+        margin-right: 30px;
+        margin-bottom: 5px;
+    }
+
+    .vert-cent {
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    hr
+    {
+        border: 0;
+        height: 1.5px;
+        background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+    }
+</style>
+
+
+  
+        <title>Demistfy-Correspondence</title>
+        <meta property="og:title" content="MVC">
+  </head>
+
+  <body data-new-gr-c-s-check-loaded="14.991.0" data-gr-ext-installed="">
+    <br>
+    <center>
+    <span style="font-size:42px">Demystifying Unsupervised <br> Semantic Correspondence Estimation</span>
+    </center>
+
+    <br><br>
+      
+      <table align="center" width="500px">
+       <tbody><tr>
+        <td align="center" width="100px">
+        <center>
+        <span style="font-size:25px"><a href="https://mehmetaygun.github.io/">Mehmet Aygun</a></span>
+        </center>
+        </td>
+
+        <td align="center" width="100px">
+        <center>
+        <span style="font-size:25px"><a href="http://oisin.info/">Oisin Mac Aodha</a></span>
+        </center>
+        </td>
+     </tr></tbody>
+   </table>
+
+    <br>
+    <table align="center" width="700px">
+       <tbody><tr>
+        <td align="center" width="100px">
+        <center>
+        <span style="font-size:20px">University of Edinburgh</span>
+        </center>
+        </td>
+     </tr>
+    </tbody></table>
+    
+    <table align="center" width="700px">
+       <tbody><tr>
+        <td align="center" width="100px">
+        <center>
+        <span style="font-size:20px">In European Conference on Computer Vision, 2022</span>
+        </center>
+        </td>
+     </tr>
+    </tbody></table>
+
+            <br>  
+
+
+            <center>
+                <span style="font-size:28px">&nbsp;<a href="None">[Paper]</a></span>
+                <span style="font-size:28px">&nbsp;<a href="https://github.com/MehmetAygun/demistfy_correspondence">[Code]</a></span>
+            <br><br>
+             <center><h1>Abstract</h1></center><table align="center" width="720px">
+                <div align="justify">We explore semantic correspondence estimation through the lens of unsupervised learning. 
+We thoroughly evaluate several recently proposed unsupervised methods across multiple challenging datasets using a standardized evaluation protocol where we vary factors such as the backbone architecture, the pre-training strategy, and the pre-training and finetuning datasets. 
+To better understand the failure modes of these methods, and in order to provide a clearer path for improvement, we provide a new diagnostic framework along with a new performance metric that is better suited to the semantic matching task. 
+Finally, we introduce a new unsupervised correspondence approach which utilizes the strength of pre-trained features while encouraging better matches during training. This results in significantly better matching performance compared to current state-of-the-art methods.</div>
+                <tbody><tr>
+                    <td width="720px">
+                      <center>
+                          <a href="./demistfy_files/fig1.png"><img src="./demistfy_files/fig1.png" height="360px"></a><br>
+                    </center>
+                    </td>
+                </tr>   
+                    <tr><td width="720">
+                      <center>
+                          <span style="font-size:14px"><i> </i>
+                    </span></center>
+                    </td>
+                </tr>
+            </tbody></table>
+
+            <br><br>
+          <hr>
+
+
+           <center><h1>Evaluation Framework</h1></center><table align="center" width="720px">
+                <div align="justify">Our paper introduce a detailed evaluation framework to understand failure cases of semantic correspondence methods along with a new metric.
+                We define additional error metrics to analyze performance of different methods in more detail. A visual overview is illustrated in Fig.2.
+                <br><br>
+                <center>
+                          <a href="./demistfy_files/fig2.png"><img src="./demistfy_files/fig2.png" width="720px"></a><br>
+                    </center>
+                    <br>
+                As our goal is to estimate semantic correspondence, we should aim to match with the correct semantic part. As a result, we propose a new version of PCK which penalizes swap errors as well. Under this metric, to make a correct prediction, a point both needs to match close to the corresponding keypoint and the closest keypoint should be the same semantic keypoint.
+                <br><br>
+
+              </div>
+                <tbody><tr>
+                    <td width="700px">
+                      <center>
+                          <a href="./demistfy_files/fig3.png"><img src="./demistfy_files/fig3.png" width="720px"></a><br>
+                    </center>
+                    </td>
+                </tr>
+                    <tr><td width="600px">
+                      <center>
+                          <span style="font-size:14px"><i> </i>
+                    </span></center>
+                    </td>
+                </tr>
+            </tbody></table>
+
+            <br><br>
+          <hr>
+
+          <center><h1>Key Results</h1></center><table align="center" width="720px">
+                <div align="justify">Overall, our proposed ASYM approach obtains better scores than other un-supervised methods on all datasets, independent of the choice of backbone or
+pre-training method, with the exception of the AFLW face dataset. Compared
+to LEAD, our proposed adaptation improves performance on datasets where the
+visual diversity is high (i.e. non-face datasets). EQ and DVE perform poorly
+on the datasets where the visual appearance is high across instances, but it
+is worth noting that these method were originally designed for the end-to-end
+trained setting.
+                <br><br>
+                <center>
+                          <a href="./demistfy_files/fig4.png"><img src="./demistfy_files/fig4.png" width="900px"></a><br>
+                    </center>
+                    <br>
+
+<b>Detailed error analysis</b>: For the unsupervised methods, we see that the most common error type is miss across all methods. 
+While ASYM reduces misses compared to other unsupervised methods, it is not as good as the supervised approaches. 
+Compared to the more sophisticated supervised approaches it generates more swaps. 
+We argue that while more supervision might help to reduce misses, in order to reduce swaps, better matching mechanisms are needed.
+Finally, we can see that our new PCK metric is reduced by 20\% compared to the original PCK metric in all cases. 
+For some applications these errors might not affect the end performance drastically, while for others, this disparity could be significant. 
+                <br><br>
+
+              </div>
+                <tbody><tr>
+                    <td width="700px">
+                      <center>
+                          <a href="./demistfy_files/fig5.png"><img src="./demistfy_files/fig5.png" width="900px"></a><br>
+                    </center>
+                    </td>
+                </tr>
+                    <tr><td width="600px">
+                      <center>
+                          <span style="font-size:14px"><i> </i>
+                    </span></center>
+                    </td>
+                </tr>
+            </tbody></table>
+               
+
+              </div>
+               </table>
+
+            <br><br>
+          <hr>
+
+       <center><h1>Paper</h1></center><table align="center" width="720px">
+             
+                <tbody><tr>
+                  <td><a href="https://arxiv.org/pdf/2102.12472.pdf"><img style="height:180px" src="./demistfy_files/paper.png"></a></td>
+                  <td><span style="font-size:14pt">
+                      &nbsp;&nbsp;&nbsp;
+                    </span></td>
+                  <td><span style="font-size:14pt">Aygun and Mac Aodha<br><br>
+                         Demystifying Unsupervised Semantic Correspondence Estimation<br><br>
+                  ECCV, 2022.
+                  <a href="https://arxiv.org/pdf/2102.12472.pdf">[Paper]</a>
+                      <a href="./demistfy_files/bibtex.txt">[Bibtex]</a>
+                    </span></td>
+              </tr>
+            </tbody></table>
+          <br>
+
+      
+                  
+              <br>
+
+                <hr>
+                <center><h1>Acknowledgements</h1></center>
+                 We thank Hakan Bilen and Omiros Pantazis for their feedback for the initial draft of this paper. This webpage template was borrowed from <a href="https://richzhang.github.io/colorization/">colorful folks</a>.
+            </left>
+        </td>
+        </tr>
+        </tbody></table>
+
+        <br><br>
+
+
+</body></html>

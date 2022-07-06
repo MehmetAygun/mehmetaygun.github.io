@@ -1,0 +1,6 @@
+@inproceedings{aygun2022eccv,
+    author    = {Aygun, Mehmet and Mac Aodha, Oisin},
+    title     = {Demystifying Unsupervised Semantic Correspondence Estimation},
+    booktitle = {European Conference on Computer Vision (ECCV)},
+    year      = {2022}
+}
