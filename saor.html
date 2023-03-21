@@ -111,6 +111,16 @@
       top: 0;
     }
 
+    model-viewer {
+      cursor: grab;
+      display: flex;
+      height: 100%;
+      width: 100%;
+      overflow: hidden;
+      position: relative;
+      user-select: none;
+    }
+
 
 </style>
   
@@ -356,7 +366,7 @@ At inference time, given a single-view image, it efficiently outputs an explicit
 
 
 
-  <center><h2>3D</h2></center><table align="center" width="720px">
+      <center><h2>3D</h2></center><table align="center" width="720px">
       
     <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
 
@@ -386,8 +396,8 @@ At inference time, given a single-view image, it efficiently outputs an explicit
       </div>  
     </div> 
 
-  </div>
-  </table>
+          </div>
+      </table>
 
 
 
