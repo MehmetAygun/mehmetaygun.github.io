@@ -111,18 +111,30 @@
       top: 0;
     }
 
-    model-viewer {
-      cursor: grab;
-      display: flex;
-      height: 100%;
-      width: 100%;
-      overflow: hidden;
-      position: relative;
-      user-select: none;
-    }
 
+
+
+
+    .div-table {
+  display: table;         
+  width: auto;         
+  border-spacing: 0px; /* cellspacing:poor IE support for  this */
+}
+.div-table-row {
+  display: table-row;
+  width: auto;
+  clear: both;
+}
+.div-table-col {
+  float: left; /* fix for  buggy browsers */
+  display: table-column;                  
+}
 
 </style>
+
+
+<script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+
   
     <title>SAOR: Single-View Articulated Object Reconstruction -
 Supplementary Material</title>
@@ -364,42 +376,42 @@ At inference time, given a single-view image, it efficiently outputs an explicit
           </div>
       </table>
 
-
-
-      <center><h2>3D</h2></center><table align="center" width="720px">
-      
-    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
-
-    <div style="height: 250px;">
-      <div class="row" style="height: 250px;">
-        
-        <div class="col" style="height: 250px;">
-            <model-viewer exposure="0.5" camera-controls enable-pan shadow-intensity="0.5" camera-orbit="0deg 45deg"
-                src="./saor_files/obj1.gltf">
-            </model-viewer>
-        </div>
-        <div class="col" style="height: 250px;">
-            <model-viewer exposure="0.5" camera-controls enable-pan shadow-intensity="0.5" camera-orbit="0deg 45deg"
-                src="./saor_files/obj1.gltf">
-            </model-viewer>
-        </div>
-        <div class="col" style="height: 250px;">
-            <model-viewer exposure="0.5" camera-controls enable-pan shadow-intensity="0.5" camera-orbit="0deg 45deg"
-                src="./saor_files/obj1.gltf">
-            </model-viewer>
-        </div>
-        <div class="col" style="height: 250px;">
-            <model-viewer exposure="0.5" camera-controls enable-pan shadow-intensity="0.5" camera-orbit="0deg 45deg"
-                src="./saor_files/obj1.gltf">
-        </model-viewer>
-        </div>
-      </div>  
-    </div> 
+    <hr>
+    <br>
+    <center><h2>Interactive Single View Reconstructions</h2></center><table align="center" width="960px">
+        <center>
+      <div class="div-table">
+                
+                
+                <div class="div-table-row">
+                    <div class="div-table-col" width=160px><a href="./saor_files/interactive/cow.jpg"><img src="./saor_files/interactive/cow.jpg" width="160px"></a></div>
+                      <div class="div-table-col" width=160px><model-viewer exposure="0.5" camera-controls enable-pan shadow-intensity="0.5" camera-orbit="0deg 45deg" width="160px"
+                                                 src="./saor_files/interactive/cow.glb">
+                                                </model-viewer></div>
+                <div class="div-table-col" width=160px><a href="./saor_files/interactive/giraffe.jpg"><img src="./saor_files/interactive/giraffe.jpg" width="160px"></a></div>
+                      <div class="div-table-col" width=160px><model-viewer exposure="0.5" camera-controls enable-pan shadow-intensity="0.5" camera-orbit="0deg 45deg" width="160px"
+                                                 src="./saor_files/interactive/giraffe.glb">
+                                                </model-viewer></div>
+                 </div>
+                
+                <br>
+                <div class="div-table-row">
+                    <div class="div-table-col" width=160px><a href="./saor_files/interactive/zebra.jpg"><img src="./saor_files/interactive/zebra.jpg" width="160px"></a></div>
+                      <div class="div-table-col" width=160px><model-viewer exposure="0.5" camera-controls enable-pan shadow-intensity="0.5" camera-orbit="0deg 45deg" width="160px"
+                                                 src="./saor_files/interactive/zebra.glb">
+                                                </model-viewer></div>
+                <div class="div-table-col" width=160px><a href="./saor_files/interactive/elephant.png"><img src="./saor_files/interactive/elephant.png" width="160px"></a></div>
+                      <div class="div-table-col" width=160px><model-viewer exposure="0.5" camera-controls enable-pan shadow-intensity="0.5" camera-orbit="0deg 45deg" width="160px"
+                                                 src="./saor_files/interactive/elephant.glb">
+                                                </model-viewer></div>
+                 </div>
 
           </div>
-      </table>
 
 
+    </table>
 
+    </center>
 
+    <br><br><br>
 </body></html>
