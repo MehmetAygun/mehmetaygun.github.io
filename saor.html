@@ -355,29 +355,39 @@ At inference time, given a single-view image, it efficiently outputs an explicit
       </table>
 
 
-      <center><h2>3D</h2></center><table align="center" width="720px">
-            <center>
 
-          <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+  <center><h2>3D</h2></center><table align="center" width="720px">
+      
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
 
-            <model-viewer 
-              src="http://raw.githubusercontent.com/german-alvarez-dev/workshop-webvr-aframe/master/ship/scene_ship.gltf" 
-              exposure="0.5" camera-controls enable-pan shadow-intensity="0.5" camera-orbit="270deg 60deg"
-              alt="boat">
+    <div style="height: 250px;">
+      <div class="row" style="height: 250px;">
+        
+        <div class="col" style="height: 250px;">
+            <model-viewer exposure="0.5" camera-controls enable-pan shadow-intensity="0.5" camera-orbit="0deg 45deg"
+                src="./saor_files/obj1.gltf">
             </model-viewer>
-
-
-             <model-viewer 
-              src="./saor_files/obj1.gltf" 
-              exposure="0.5" camera-controls enable-pan shadow-intensity="0.5" camera-orbit="270deg 60deg"
-              alt="horse">
+        </div>
+        <div class="col" style="height: 250px;">
+            <model-viewer exposure="0.5" camera-controls enable-pan shadow-intensity="0.5" camera-orbit="0deg 45deg"
+                src="./saor_files/obj1.gltf">
             </model-viewer>
+        </div>
+        <div class="col" style="height: 250px;">
+            <model-viewer exposure="0.5" camera-controls enable-pan shadow-intensity="0.5" camera-orbit="0deg 45deg"
+                src="./saor_files/obj1.gltf">
+            </model-viewer>
+        </div>
+        <div class="col" style="height: 250px;">
+            <model-viewer exposure="0.5" camera-controls enable-pan shadow-intensity="0.5" camera-orbit="0deg 45deg"
+                src="./saor_files/obj1.gltf">
+        </model-viewer>
+        </div>
+      </div>  
+    </div> 
 
-            </center>
-            <br>
-            <br><br>
-          </div>
-      </table>
+  </div>
+  </table>
 
 
 
