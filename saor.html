@@ -147,7 +147,7 @@ Supplementary Material</title>
   <body data-new-gr-c-s-check-loaded="14.991.0" data-gr-ext-installed="">
     <br>
     <center>
-    <span style="font-size:42px">SAOR: Single-View Articulated Object Reconstructions</span>
+    <span style="font-size:42px">SAOR: Single-View Articulated Object Reconstruction</span>
     
     
 
@@ -200,7 +200,7 @@ Supplementary Material</title>
         
          <center><h2>Abstract</h2></center><table align="center" width="960px">
          <center>
-           <div align="justify">We introduce, SAOR, a novel approach for estimating the 3D shape, texture, and viewpoint of an articulated object from a single image captured in the wild. 
+           <div align="justify">We introduce SAOR, a novel approach for estimating the 3D shape, texture, and viewpoint of an articulated object from a single image captured in the wild. 
 Unlike prior approaches that rely on pre-defined category-specific 3D templates or tailored 3D skeletons, SAOR learns to articulate shapes from single-view image collections with a skeleton-free part-based model without requiring any 3D object shape priors. Our method only requires estimated object silhouettes and relative depth maps from off-the-shelf pre-trained networks during training. 
 At inference time, given a single-view image, it efficiently outputs an explicit mesh representation. </div>
     
@@ -221,11 +221,12 @@ At inference time, given a single-view image, it efficiently outputs an explicit
    </table> 
 
    <hr>  -->
+   <hr>
 
    <center><h2>Singe Frame Reconstuction Results</h2></center><table align="center" width="960px">
             <div align="justify">
              <center>
-            <div align="justify" style="font-size:18px">SAOR learns to estimate 3D shape of highly articulated objects from single images without using any 3D object prior during training like 3D template or skeleton. It also estimates texture, viewpoint and a rough part segmentation, all learned in a self-supervised manner.</div>
+            <div align="justify" style="font-size:18px">SAOR learns to estimate 3D shape of highly articulated objects from single images without using any 3D object prior (e.g. a 3D template or skeleton) during training. It also estimates texture, viewpoint, and a 3D articulated part segmentation, all learned in a self-supervised manner.</div>
             <br><br>
             
 
@@ -312,56 +313,10 @@ At inference time, given a single-view image, it efficiently outputs an explicit
           </div>
       </table>
 
-       <br><hr><br>
-      
-       <center><h2>Articulation Transfer</h2></center><table align="center" width="960px">
-            <div align="justify">
-        <center>
-            <div align="justify" style="font-size:18px">SAOR learns to disentangle shape deformation and articulation during training. We show that given a source image (left), we can transfer articulation from another image (right) via interpolating articulation features, and obtain reasonable articulation transfer (middle).</div>
-            <br><br>
-             
-
-             <a href="./saor_files/art/src1.jpg"><img src="./saor_files/art/src1.jpg" width="160px"></a>
-             
-             <video width="160px" height="160px" autoplay controls muted preload loop playsinline>
-              <source src="saor_files/art/art1.mp4" type="video/mp4">
-            </video>
-            
-             <a href="./saor_files/art/trg1.jpg"><img src="./saor_files/art/trg1.jpg" width="160px"></a>
-             &emsp;<a href="./saor_files/vl.jpg"><img src="./saor_files/vl.jpg" width="2px" height="160px"></a>&emsp;
-
-
-              <a href="./saor_files/art/src2.png"><img src="./saor_files/art/src2.png" width="160px"></a>
-             <video width="160px" height="160px" autoplay controls muted preload loop playsinline>
-              <source src="saor_files/art/art2.mp4" type="video/mp4">
-            </video>
-             <a href="./saor_files/art/trg2.png"><img src="./saor_files/art/trg2.png" width="160px"></a>
-             <br>
-
-             <a href="./saor_files/art/src3.jpg"><img src="./saor_files/art/src3.jpg" width="160px"></a>
-             <video width="160px" height="160px" autoplay controls muted preload loop playsinline>
-              <source src="saor_files/art/art3.mp4" type="video/mp4">
-            </video>
-             <a href="./saor_files/art/trg3.jpg"><img src="./saor_files/art/trg3.jpg" width="160px"></a>
-            &emsp;<a href="./saor_files/vl.jpg"><img src="./saor_files/vl.jpg" width="2px" height="160px"></a>&emsp;
-              
-              <a href="./saor_files/art/src4.jpg"><img src="./saor_files/art/src4.jpg" width="160px"></a>
-             <video width="160px" height="160px" autoplay controls muted preload loop playsinline>
-              <source src="saor_files/art/art4.mp4" type="video/mp4">
-            </video>
-             <a href="./saor_files/art/trg4.jpg"><img src="./saor_files/art/trg4.jpg" width="160px"></a>
-             
-             <br>
-            </center>
-            <br><br>
-          </div>
-      </table>
-
-
-
+       
         <br><hr><br>
 
-          <center><h2>Per Frame Predictions</h2></center><table align="center" width="720px">
+          <center><h2>Per-Frame Predictions</h2></center><table align="center" width="720px">
             <div align="justify">
               <center>
                  <div align="justify" style="font-size:18px">SAOR robustly estimate 3D shape, viewpoint, and texture of objects using per-frame input without using any temporal information.</div>
@@ -413,5 +368,52 @@ At inference time, given a single-view image, it efficiently outputs an explicit
 
     </center>
 
-    <br><br><br>
+   <br><hr><br>
+      
+       <center><h2>Articulation Transfer</h2></center><table align="center" width="960px">
+            <div align="justify">
+        <center>
+            <div align="justify" style="font-size:18px">SAOR learns to disentangle shape deformation and articulation during training. Given a source image (left) we can transfer articulation from another image (right) via interpolating articulation features, and obtain reasonable articulation transfer (middle).</div>
+            <br><br>
+             
+
+             <a href="./saor_files/art/src1.jpg"><img src="./saor_files/art/src1.jpg" width="160px"></a>
+             
+             <video width="160px" height="160px" autoplay controls muted preload loop playsinline>
+              <source src="saor_files/art/art1.mp4" type="video/mp4">
+            </video>
+            
+             <a href="./saor_files/art/trg1.jpg"><img src="./saor_files/art/trg1.jpg" width="160px"></a>
+             &emsp;<a href="./saor_files/vl.jpg"><img src="./saor_files/vl.jpg" width="2px" height="160px"></a>&emsp;
+
+
+              <a href="./saor_files/art/src2.png"><img src="./saor_files/art/src2.png" width="160px"></a>
+             <video width="160px" height="160px" autoplay controls muted preload loop playsinline>
+              <source src="saor_files/art/art2.mp4" type="video/mp4">
+            </video>
+             <a href="./saor_files/art/trg2.png"><img src="./saor_files/art/trg2.png" width="160px"></a>
+             <br>
+
+             <a href="./saor_files/art/src3.jpg"><img src="./saor_files/art/src3.jpg" width="160px"></a>
+             <video width="160px" height="160px" autoplay controls muted preload loop playsinline>
+              <source src="saor_files/art/art3.mp4" type="video/mp4">
+            </video>
+             <a href="./saor_files/art/trg3.jpg"><img src="./saor_files/art/trg3.jpg" width="160px"></a>
+            &emsp;<a href="./saor_files/vl.jpg"><img src="./saor_files/vl.jpg" width="2px" height="160px"></a>&emsp;
+              
+              <a href="./saor_files/art/src4.jpg"><img src="./saor_files/art/src4.jpg" width="160px"></a>
+             <video width="160px" height="160px" autoplay controls muted preload loop playsinline>
+              <source src="saor_files/art/art4.mp4" type="video/mp4">
+            </video>
+             <a href="./saor_files/art/trg4.jpg"><img src="./saor_files/art/trg4.jpg" width="160px"></a>
+             
+             <br>
+            </center>
+            <br><br>
+          </div>
+      </table>
+
+<br><hr><br>
+
+
 </body></html>
