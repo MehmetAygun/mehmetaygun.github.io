@@ -223,7 +223,18 @@ At inference time, given a single-view image, it efficiently outputs an explicit
    <hr>  -->
    <hr>
 
-   <center><h2>Singe Frame Reconstuction Results</h2></center><table align="center" width="960px">
+<center><h2>Single Frame Reconstuction Results</h2></center><table align="center" width="960px">
+            <div align="justify">
+             <center>
+            <div align="justify" style="font-size:18px">SAOR learns to estimate 3D shape of highly articulated objects from single images without using any 3D object prior (e.g. a 3D template or skeleton) during training. It also estimates texture, viewpoint, and a 3D articulated part segmentation, all learned in a self-supervised manner.
+            As It does not use any priors, it can learn to predict even 100s of classes of object classes in a single model. All of the examples below generated using a sinle model which trained on 101 animal classes including zebras, horses, cows, elephants, giraffes, birds, penguins, etc. </div>
+            <video width="1024px" height="1024px" autoplay controls muted preload loop playsinline>
+              <source src="saor_files/saor_101_all_output.mp4" type="video/mp4" >
+            </video>
+          </div>
+      </table>
+
+ <!--   <center><h2>Singe Frame Reconstuction Results</h2></center><table align="center" width="960px">
             <div align="justify">
              <center>
             <div align="justify" style="font-size:18px">SAOR learns to estimate 3D shape of highly articulated objects from single images without using any 3D object prior (e.g. a 3D template or skeleton) during training. It also estimates texture, viewpoint, and a 3D articulated part segmentation, all learned in a self-supervised manner.</div>
@@ -315,7 +326,7 @@ At inference time, given a single-view image, it efficiently outputs an explicit
 
        
         <br><hr><br>
-
+ -->
           <center><h2>Per-Frame Predictions</h2></center><table align="center" width="720px">
             <div align="justify">
               <center>
@@ -394,18 +405,18 @@ At inference time, given a single-view image, it efficiently outputs an explicit
              <a href="./saor_files/art/trg2.png"><img src="./saor_files/art/trg2.png" width="160px"></a>
              <br>
 
-             <a href="./saor_files/art/src3.jpg"><img src="./saor_files/art/src3.jpg" width="160px"></a>
+             <a href="./saor_files/art/src3.png"><img src="./saor_files/art/src3.png" width="160px"></a>
              <video width="160px" height="160px" autoplay controls muted preload loop playsinline>
               <source src="saor_files/art/art3.mp4" type="video/mp4">
             </video>
-             <a href="./saor_files/art/trg3.jpg"><img src="./saor_files/art/trg3.jpg" width="160px"></a>
+             <a href="./saor_files/art/trg3.png"><img src="./saor_files/art/trg3.png" width="160px"></a>
             &emsp;<a href="./saor_files/vl.jpg"><img src="./saor_files/vl.jpg" width="2px" height="160px"></a>&emsp;
               
-              <a href="./saor_files/art/src4.jpg"><img src="./saor_files/art/src4.jpg" width="160px"></a>
+              <a href="./saor_files/art/src4.png"><img src="./saor_files/art/src4.png" width="160px"></a>
              <video width="160px" height="160px" autoplay controls muted preload loop playsinline>
               <source src="saor_files/art/art4.mp4" type="video/mp4">
             </video>
-             <a href="./saor_files/art/trg4.jpg"><img src="./saor_files/art/trg4.jpg" width="160px"></a>
+             <a href="./saor_files/art/trg4.png"><img src="./saor_files/art/trg4.png" width="160px"></a>
              
              <br>
             </center>
